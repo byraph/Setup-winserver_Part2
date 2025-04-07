@@ -25,7 +25,7 @@ Le nom de domaine : *****
 
 Le mot de passe DSRM : "*******"
 
-L’adresse DNS : 192.168.***.***
+L’adresse DNS : 192.168.000.000
 
 🧪 Testé avec succès sur :
 ✅ Windows Server 2019
