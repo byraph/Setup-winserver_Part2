@@ -8,10 +8,10 @@ if ($InterfaceAlias) {
 Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 #  Promouvoir le serveur en tant que contrôleur de domaine (redémarrage requis) Changer les variantes pour adapter
 Import-Module ADDSDeployment
-$DomainName = "admin.lan"
-$SafeModeAdministratorPassword = ConvertTo-SecureString -AsPlainText "Iprec123456" -Force
+$DomainName = "***"
+$SafeModeAdministratorPassword = ConvertTo-SecureString -AsPlainText "****" -Force
 Install-ADDSForest -DomainName $DomainName -SafeModeAdministratorPassword $SafeModeAdministratorPassword -InstallDNS -Force
 # Configurer adresse DNS
-Set-DnsClientServerAddress -InterfaceIndex $InterfaceAlias -ServerAddresses 192.168.184.10
+Set-DnsClientServerAddress -InterfaceIndex $InterfaceAlias -ServerAddresses 192.168.000.000
 }
 Restart-Computer -Force
